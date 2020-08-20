@@ -24,7 +24,7 @@ def getCurrentFlavor() {
 }
 
 def loadDotEnv(flavor = getCurrentFlavor()) {
-    def envFile = ".env"
+    def envFile = "assets/.env"
 
     if (System.env['ENVFILE']) {
         envFile = System.env['ENVFILE']
@@ -58,9 +58,9 @@ def loadDotEnv(flavor = getCurrentFlavor()) {
             }
         }
     } else {
-        println("**************************")
-        println("*** Missing .env file ****")
-        println("**************************")
+        println("*********************************")
+        println("*** Missing assets/.env file ****")
+        println("*********************************")
     }
 
     project.ext.set("env", env)
